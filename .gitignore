@@ -1,0 +1,7 @@
+__pycache__/
+UNET_package/
+prog_utils_copy/
+heatmaps/
+growth_stage.pt
+rice_objects.keras
+rice_regions.keras
