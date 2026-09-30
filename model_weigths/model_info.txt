@@ -1,0 +1,1 @@
+Currently there are three models : growth_stage.pt, rice_regions.keras, rice_objects.keras. Have not uploaded the model weigths because of the size.
