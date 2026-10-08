@@ -6,3 +6,4 @@ growth_stage.pt
 rice_objects.keras
 rice_regions.keras
 model_weights/best_unified_model.keras
+model_weights_offline.zip
