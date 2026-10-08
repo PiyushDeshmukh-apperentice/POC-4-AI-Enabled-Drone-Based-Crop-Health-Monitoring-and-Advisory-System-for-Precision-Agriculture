@@ -2,16 +2,21 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+import streamlit as st
 import tensorflow as tf
-from tensorflow.keras.applications.efficientnet import preprocess_input
+# Changed preprocessing to ResNet to match best_unified_model.keras
+from tensorflow.keras.applications.resnet import preprocess_input
 
-MODEL_PATH = Path(__file__).resolve().parents[1] / "model_weights" / "rice_regions.keras"
+# Updated model filename
+MODEL_PATH = Path(__file__).resolve().parents[1] / "model_weights" / "best_unified_model.keras"
 HEALTHY_THRESH = 0.35
 UNHEALTHY_THRESH = 0.65
 BATCH_SIZE = 32
-DEFAULT_PATCH_SIZE = 260
+# Updated to match the 224x224 input size used during training
+DEFAULT_PATCH_SIZE = 224
 
 
+@st.cache_resource
 def load_model():
     return tf.keras.models.load_model(MODEL_PATH, compile=False)
 
@@ -24,8 +29,10 @@ def analyze_rgb_image(image_rgb, model):
 
     img_h, img_w, _ = image_rgb.shape
     input_shape = model.input_shape
+    # Uses 224 as default if model.input_shape is dynamic/None
     patch_h = input_shape[1] or DEFAULT_PATCH_SIZE
     patch_w = input_shape[2] or DEFAULT_PATCH_SIZE
+
     if img_h < patch_h or img_w < patch_w:
         raise ValueError(
             f"RGB image must be at least {patch_w} x {patch_h} pixels for this model."
@@ -44,8 +51,11 @@ def analyze_rgb_image(image_rgb, model):
         image_rgb[y:y + patch_h, x:x + patch_w]
         for x, y in coordinates
     ], dtype=np.float32)
+
+    # ResNet preprocess_input is now correctly applied here
     predictions = model.predict(preprocess_input(patches), batch_size=BATCH_SIZE, verbose=0)
 
+    # Handles the Dense(1, sigmoid) output from the new unified model
     if predictions.shape[-1] == 1:
         unhealthy_probs = predictions.reshape(-1)
     else:
@@ -82,7 +92,7 @@ def analyze_rgb_image(image_rgb, model):
     heat_mask[valid_pixels] /= counts_map[valid_pixels, None]
     blended_image = image_rgb.copy()
     blended_image[valid_pixels] = (
-        image_rgb[valid_pixels] * 0.6 + heat_mask[valid_pixels] * 0.4
+            image_rgb[valid_pixels] * 0.6 + heat_mask[valid_pixels] * 0.4
     ).astype(np.uint8)
 
     results = pd.DataFrame(records)
