@@ -1,0 +1,152 @@
+[
+  {
+    "arch": "efficientnet_b0",
+    "method": "resize",
+    "input_shape": [
+      1,
+      3,
+      384,
+      384
+    ],
+    "mean_latency_ms": 5.9955539961811155,
+    "std_latency_ms": 1.239959005924824,
+    "p50_latency_ms": 5.53240001318045,
+    "p95_latency_ms": 8.716209983685983,
+    "fps": 166.79025835426597
+  },
+  {
+    "arch": "efficientnet_b1",
+    "method": "resize",
+    "input_shape": [
+      1,
+      3,
+      384,
+      384
+    ],
+    "mean_latency_ms": 7.5068319973070174,
+    "std_latency_ms": 0.9784156290803223,
+    "p50_latency_ms": 7.261649996507913,
+    "p95_latency_ms": 8.70244001125684,
+    "fps": 133.2119861425882
+  },
+  {
+    "arch": "efficientnet_b2",
+    "method": "resize",
+    "input_shape": [
+      1,
+      3,
+      384,
+      384
+    ],
+    "mean_latency_ms": 8.608265998773277,
+    "std_latency_ms": 1.8162303009260752,
+    "p50_latency_ms": 8.41614999808371,
+    "p95_latency_ms": 10.25108999747317,
+    "fps": 116.16741398819521
+  },
+  {
+    "arch": "efficientnet_b3",
+    "method": "resize",
+    "input_shape": [
+      1,
+      3,
+      384,
+      384
+    ],
+    "mean_latency_ms": 9.949570001335815,
+    "std_latency_ms": 2.1210683005065865,
+    "p50_latency_ms": 9.2162999935681,
+    "p95_latency_ms": 13.966205005999647,
+    "fps": 100.50685606169327
+  },
+  {
+    "arch": "resnet50",
+    "method": "resize",
+    "input_shape": [
+      1,
+      3,
+      384,
+      384
+    ],
+    "mean_latency_ms": 5.438126002554782,
+    "std_latency_ms": 1.293716351758203,
+    "p50_latency_ms": 4.746549995616078,
+    "p95_latency_ms": 7.714055011456367,
+    "fps": 183.88687564984872
+  },
+  {
+    "arch": "efficientnet_b0",
+    "method": "tile",
+    "input_shape": [
+      35,
+      3,
+      288,
+      288
+    ],
+    "mean_latency_ms": 27.03263400006108,
+    "std_latency_ms": 0.27116135079016623,
+    "p50_latency_ms": 26.990700003807433,
+    "p95_latency_ms": 27.468204994511325,
+    "fps": 36.99232564602253
+  },
+  {
+    "arch": "efficientnet_b1",
+    "method": "tile",
+    "input_shape": [
+      35,
+      3,
+      288,
+      288
+    ],
+    "mean_latency_ms": 35.99863000155892,
+    "std_latency_ms": 0.6287346933829907,
+    "p50_latency_ms": 35.817199997836724,
+    "p95_latency_ms": 37.36595000664238,
+    "fps": 27.778834915570258
+  },
+  {
+    "arch": "efficientnet_b2",
+    "method": "tile",
+    "input_shape": [
+      35,
+      3,
+      288,
+      288
+    ],
+    "mean_latency_ms": 38.40326599951368,
+    "std_latency_ms": 0.7838255307724482,
+    "p50_latency_ms": 38.25024999969173,
+    "p95_latency_ms": 39.206499989086296,
+    "fps": 26.039451957358615
+  },
+  {
+    "arch": "efficientnet_b3",
+    "method": "tile",
+    "input_shape": [
+      35,
+      3,
+      288,
+      288
+    ],
+    "mean_latency_ms": 53.91895999957342,
+    "std_latency_ms": 1.1984969428990078,
+    "p50_latency_ms": 53.98794999928214,
+    "p95_latency_ms": 54.906915001629386,
+    "fps": 18.546351784379958
+  },
+  {
+    "arch": "resnet50",
+    "method": "tile",
+    "input_shape": [
+      35,
+      3,
+      288,
+      288
+    ],
+    "mean_latency_ms": 61.90764799597673,
+    "std_latency_ms": 2.0226856240051236,
+    "p50_latency_ms": 61.76229999982752,
+    "p95_latency_ms": 64.99646498414222,
+    "fps": 16.153093072845994
+  }
+]

@@ -1,0 +1,513 @@
+{
+  "device": "cuda",
+  "total_train_samples": 969,
+  "total_test_samples": 818,
+  "test1_color_baseline": {
+    "random_forest": {
+      "accuracy": 0.8936430317848411,
+      "macro_f1": 0.9033146610779403,
+      "top_features": {
+        "GLI": 0.13539379800092718,
+        "ExG": 0.13220527408682167,
+        "S_mean": 0.12699826997399918,
+        "H_mean": 0.11336016255479439,
+        "R_mean": 0.07874563151588816
+      },
+      "confusion_matrix": [
+        [
+          162,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          141,
+          17,
+          6
+        ],
+        [
+          0,
+          64,
+          264,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          164
+        ]
+      ]
+    },
+    "logistic_regression": {
+      "accuracy": 0.9254278728606357,
+      "macro_f1": 0.9279164414944231,
+      "confusion_matrix": [
+        [
+          162,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          132,
+          27,
+          5
+        ],
+        [
+          0,
+          29,
+          299,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          164
+        ]
+      ]
+    }
+  },
+  "test2_grayscale_ablation": {
+    "efficientnet_b0": {
+      "accuracy": 0.5525672371638142,
+      "macro_f1": 0.4996856702517123,
+      "cm": [
+        [
+          162,
+          0,
+          0,
+          0
+        ],
+        [
+          102,
+          62,
+          0,
+          0
+        ],
+        [
+          100,
+          32,
+          196,
+          0
+        ],
+        [
+          18,
+          104,
+          10,
+          32
+        ]
+      ]
+    },
+    "efficientnet_b1": {
+      "accuracy": 0.6540342298288508,
+      "macro_f1": 0.694808924334672,
+      "cm": [
+        [
+          162,
+          0,
+          0,
+          0
+        ],
+        [
+          14,
+          148,
+          2,
+          0
+        ],
+        [
+          5,
+          256,
+          67,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          158
+        ]
+      ]
+    },
+    "efficientnet_b2": {
+      "accuracy": 0.9058679706601467,
+      "macro_f1": 0.9057006118154306,
+      "cm": [
+        [
+          162,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          122,
+          41,
+          0
+        ],
+        [
+          0,
+          7,
+          321,
+          0
+        ],
+        [
+          0,
+          5,
+          23,
+          136
+        ]
+      ]
+    },
+    "efficientnet_b3": {
+      "accuracy": 0.684596577017115,
+      "macro_f1": 0.6330808047758888,
+      "cm": [
+        [
+          162,
+          0,
+          0,
+          0
+        ],
+        [
+          110,
+          33,
+          8,
+          13
+        ],
+        [
+          21,
+          20,
+          203,
+          84
+        ],
+        [
+          2,
+          0,
+          0,
+          162
+        ]
+      ]
+    },
+    "resnet50": {
+      "accuracy": 0.7017114914425427,
+      "macro_f1": 0.6742215121902065,
+      "cm": [
+        [
+          162,
+          0,
+          0,
+          0
+        ],
+        [
+          62,
+          78,
+          24,
+          0
+        ],
+        [
+          3,
+          64,
+          261,
+          0
+        ],
+        [
+          2,
+          2,
+          87,
+          73
+        ]
+      ]
+    }
+  },
+  "test3_photometric_stress": {
+    "efficientnet_b0": {
+      "Clean (Baseline)": {
+        "accuracy": 0.980440097799511,
+        "macro_f1": 0.9812271062271062
+      },
+      "High Brightness (+30%)": {
+        "accuracy": 0.9596577017114915,
+        "macro_f1": 0.9596367605591097
+      },
+      "Low Brightness (-30%)": {
+        "accuracy": 0.9779951100244498,
+        "macro_f1": 0.9790911172161172
+      },
+      "High Contrast (+30%)": {
+        "accuracy": 0.9828850855745721,
+        "macro_f1": 0.983694133091641
+      },
+      "Low Contrast (-30%)": {
+        "accuracy": 0.9584352078239609,
+        "macro_f1": 0.9509146765516345
+      },
+      "Motion Blur (Gaussian Blur)": {
+        "accuracy": 0.1980440097799511,
+        "macro_f1": 0.0826530612244898
+      },
+      "Sensor Noise (Gaussian Grain)": {
+        "accuracy": 0.6405867970660146,
+        "macro_f1": 0.5691079892508611
+      }
+    },
+    "efficientnet_b1": {
+      "Clean (Baseline)": {
+        "accuracy": 0.9841075794621027,
+        "macro_f1": 0.9850120614304524
+      },
+      "High Brightness (+30%)": {
+        "accuracy": 0.9706601466992665,
+        "macro_f1": 0.9722413158221339
+      },
+      "Low Brightness (-30%)": {
+        "accuracy": 0.9816625916870416,
+        "macro_f1": 0.9827168704889393
+      },
+      "High Contrast (+30%)": {
+        "accuracy": 0.980440097799511,
+        "macro_f1": 0.9815025711430181
+      },
+      "Low Contrast (-30%)": {
+        "accuracy": 0.9400977995110025,
+        "macro_f1": 0.9456028689261249
+      },
+      "Motion Blur (Gaussian Blur)": {
+        "accuracy": 0.7665036674816625,
+        "macro_f1": 0.6711993080914856
+      },
+      "Sensor Noise (Gaussian Grain)": {
+        "accuracy": 0.40464547677261614,
+        "macro_f1": 0.4126690842359063
+      }
+    },
+    "efficientnet_b2": {
+      "Clean (Baseline)": {
+        "accuracy": 0.9853300733496333,
+        "macro_f1": 0.986151507759284
+      },
+      "High Brightness (+30%)": {
+        "accuracy": 0.9865525672371638,
+        "macro_f1": 0.9873969752809213
+      },
+      "Low Brightness (-30%)": {
+        "accuracy": 0.9645476772616137,
+        "macro_f1": 0.9672810827420782
+      },
+      "High Contrast (+30%)": {
+        "accuracy": 0.969437652811736,
+        "macro_f1": 0.9707184667431487
+      },
+      "Low Contrast (-30%)": {
+        "accuracy": 0.9841075794621027,
+        "macro_f1": 0.9845587748632922
+      },
+      "Motion Blur (Gaussian Blur)": {
+        "accuracy": 0.3276283618581907,
+        "macro_f1": 0.22780377067600407
+      },
+      "Sensor Noise (Gaussian Grain)": {
+        "accuracy": 0.687041564792176,
+        "macro_f1": 0.6764362944625176
+      }
+    },
+    "efficientnet_b3": {
+      "Clean (Baseline)": {
+        "accuracy": 0.9877750611246944,
+        "macro_f1": 0.9884224397590362
+      },
+      "High Brightness (+30%)": {
+        "accuracy": 0.9779951100244498,
+        "macro_f1": 0.9790269926036049
+      },
+      "Low Brightness (-30%)": {
+        "accuracy": 0.9547677261613692,
+        "macro_f1": 0.9552026226912962
+      },
+      "High Contrast (+30%)": {
+        "accuracy": 0.9682151589242054,
+        "macro_f1": 0.9692807192807193
+      },
+      "Low Contrast (-30%)": {
+        "accuracy": 0.9828850855745721,
+        "macro_f1": 0.9841820987654322
+      },
+      "Motion Blur (Gaussian Blur)": {
+        "accuracy": 0.4132029339853301,
+        "macro_f1": 0.3909474023001101
+      },
+      "Sensor Noise (Gaussian Grain)": {
+        "accuracy": 0.6271393643031785,
+        "macro_f1": 0.6287773178855973
+      }
+    },
+    "resnet50": {
+      "Clean (Baseline)": {
+        "accuracy": 0.9657701711491442,
+        "macro_f1": 0.9664327485380118
+      },
+      "High Brightness (+30%)": {
+        "accuracy": 0.9743276283618582,
+        "macro_f1": 0.975328663970274
+      },
+      "Low Brightness (-30%)": {
+        "accuracy": 0.9278728606356969,
+        "macro_f1": 0.9266333006554401
+      },
+      "High Contrast (+30%)": {
+        "accuracy": 0.9449877750611247,
+        "macro_f1": 0.9446984572832974
+      },
+      "Low Contrast (-30%)": {
+        "accuracy": 0.9572127139364304,
+        "macro_f1": 0.9574737112460054
+      },
+      "Motion Blur (Gaussian Blur)": {
+        "accuracy": 0.35207823960880197,
+        "macro_f1": 0.31596041661299024
+      },
+      "Sensor Noise (Gaussian Grain)": {
+        "accuracy": 0.882640586797066,
+        "macro_f1": 0.8646368305209098
+      }
+    }
+  },
+  "test4_plot_disaggregation": {
+    "F2_01": {
+      "total_samples": 12,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "errors": 0
+    },
+    "F2_02": {
+      "total_samples": 150,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "errors": 0
+    },
+    "F2_03": {
+      "total_samples": 82,
+      "accuracy": 0.9512195121951219,
+      "macro_f1": 0.4875,
+      "errors": 4
+    },
+    "F2_04": {
+      "total_samples": 82,
+      "accuracy": 0.9390243902439024,
+      "macro_f1": 0.48427672955974843,
+      "errors": 5
+    },
+    "F2_05": {
+      "total_samples": 82,
+      "accuracy": 0.9878048780487805,
+      "macro_f1": 0.49693251533742333,
+      "errors": 1
+    },
+    "F2_06": {
+      "total_samples": 82,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "errors": 0
+    },
+    "F2_07": {
+      "total_samples": 82,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "errors": 0
+    },
+    "F2_08": {
+      "total_samples": 82,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "errors": 0
+    },
+    "F2_09": {
+      "total_samples": 82,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "errors": 0
+    },
+    "F2_10": {
+      "total_samples": 82,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "errors": 0
+    }
+  },
+  "test5_transition_error_analysis": [
+    {
+      "cid": "20250816165117_0213",
+      "plot": "F2_03",
+      "flight_date": "20250816",
+      "target_name": "Vegetative",
+      "pred_name": "Flowering"
+    },
+    {
+      "cid": "20250816165152_0227",
+      "plot": "F2_03",
+      "flight_date": "20250816",
+      "target_name": "Vegetative",
+      "pred_name": "Flowering"
+    },
+    {
+      "cid": "20250816165204_0232",
+      "plot": "F2_03",
+      "flight_date": "20250816",
+      "target_name": "Vegetative",
+      "pred_name": "Flowering"
+    },
+    {
+      "cid": "20250816165812_0381",
+      "plot": "F2_03",
+      "flight_date": "20250816",
+      "target_name": "Vegetative",
+      "pred_name": "Flowering"
+    },
+    {
+      "cid": "20250906065512_0142",
+      "plot": "F2_04",
+      "flight_date": "20250906",
+      "target_name": "Vegetative",
+      "pred_name": "Flowering"
+    },
+    {
+      "cid": "20250906065840_0226",
+      "plot": "F2_04",
+      "flight_date": "20250906",
+      "target_name": "Vegetative",
+      "pred_name": "Flowering"
+    },
+    {
+      "cid": "20250906065914_0240",
+      "plot": "F2_04",
+      "flight_date": "20250906",
+      "target_name": "Vegetative",
+      "pred_name": "Flowering"
+    },
+    {
+      "cid": "20250906070242_0324",
+      "plot": "F2_04",
+      "flight_date": "20250906",
+      "target_name": "Vegetative",
+      "pred_name": "Flowering"
+    },
+    {
+      "cid": "20250906070448_0375",
+      "plot": "F2_04",
+      "flight_date": "20250906",
+      "target_name": "Vegetative",
+      "pred_name": "Flowering"
+    },
+    {
+      "cid": "20250927143629_0157",
+      "plot": "F2_05",
+      "flight_date": "20250927",
+      "target_name": "Flowering",
+      "pred_name": "Vegetative"
+    }
+  ],
+  "total_runtime_seconds": 611.8776409626007
+}

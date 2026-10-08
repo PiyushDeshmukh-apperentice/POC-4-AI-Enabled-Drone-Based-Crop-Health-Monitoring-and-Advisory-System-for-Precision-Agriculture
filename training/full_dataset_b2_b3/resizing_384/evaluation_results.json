@@ -1,0 +1,96 @@
+[
+  {
+    "arch": "efficientnet_b2",
+    "method": "resize",
+    "resolution": 384,
+    "param_count": 7706630,
+    "training_time": 5020.634757518768,
+    "overall_accuracy": 0.9984301412872841,
+    "macro_f1": 0.9972058429375503,
+    "veg_to_flow_confusion": 0,
+    "flow_to_veg_confusion": 0
+  },
+  {
+    "arch": "efficientnet_b3",
+    "method": "resize",
+    "resolution": 384,
+    "param_count": 10702380,
+    "training_time": 4883.435720682144,
+    "overall_accuracy": 1.0,
+    "macro_f1": 1.0,
+    "veg_to_flow_confusion": 0,
+    "flow_to_veg_confusion": 0
+  },
+  {
+    "arch": "efficientnet_b2",
+    "method": "resize",
+    "split_name": "split_test_F1_noval",
+    "seed": 42,
+    "param_count": 7708039,
+    "training_time": 3212.326644897461,
+    "overall_accuracy": 0.9074,
+    "macro_f1": 0.9101002622460296,
+    "ci_lower": 0.7976302446281607,
+    "ci_upper": 0.9767203274357754
+  },
+  {
+    "arch": "efficientnet_b3",
+    "method": "resize",
+    "split_name": "split_test_F1_noval",
+    "seed": 42,
+    "param_count": 10703917,
+    "training_time": 2447.7145862579346,
+    "overall_accuracy": 0.9032,
+    "macro_f1": 0.9050953697385247,
+    "ci_lower": 0.7688442768411713,
+    "ci_upper": 0.9827058374147553
+  },
+  {
+    "arch": "efficientnet_b2",
+    "method": "resize",
+    "split_name": "split_test_F2_noval",
+    "seed": 43,
+    "param_count": 7708039,
+    "training_time": 3303.854818344116,
+    "overall_accuracy": 0.9569707401032702,
+    "macro_f1": 0.9611588747177275,
+    "ci_lower": 0.9110728628800918,
+    "ci_upper": 0.9945419788291936
+  },
+  {
+    "arch": "efficientnet_b2",
+    "method": "resize",
+    "split_name": "split_test_F2_noval",
+    "seed": 44,
+    "param_count": 7708039,
+    "training_time": 3141.396751642227,
+    "overall_accuracy": 0.96815834767642,
+    "macro_f1": 0.9712842174521589,
+    "ci_lower": 0.9421875,
+    "ci_upper": 0.9905335628227194
+  },
+  {
+    "arch": "efficientnet_b2",
+    "method": "resize",
+    "split_name": "split_control_F1",
+    "seed": 42,
+    "param_count": 7708039,
+    "training_time": 2562.7054698467255,
+    "overall_accuracy": 0.996005326231691,
+    "macro_f1": 0.9963633358128771,
+    "ci_lower": null,
+    "ci_upper": null
+  },
+  {
+    "arch": "efficientnet_b2",
+    "method": "resize",
+    "split_name": "split_control_F2",
+    "seed": 42,
+    "param_count": 7708039,
+    "training_time": 1818.4367339611053,
+    "overall_accuracy": 1.0,
+    "macro_f1": 1.0,
+    "ci_lower": null,
+    "ci_upper": null
+  }
+]
