@@ -1,4 +1,4 @@
-# Crop Health Monitoring Demo — First Iteration
+# AI-Enabled Drone-Based Crop Health Monitoring and Advisory System for Precision Agriculture Demo — First Iteration
 
 This repository contains the first demo iteration of an AI-enabled, drone-based
 crop health monitoring and advisory system. It is a local Streamlit application
