@@ -1,0 +1,27 @@
+__pycache__/
+UNET_package/
+prog_utils_copy/
+heatmaps/
+growth_stage.pt
+rice_objects.keras
+rice_regions.keras
+.venv/
+venv/
+__pycache__/
+*.pyc
+# Python environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Dataset files
+dataset_full/
+dataset_multispectral/
+
+# Generated outputs
+ndvi_output/
+outputs/
+
+# Environment variables
+.env
