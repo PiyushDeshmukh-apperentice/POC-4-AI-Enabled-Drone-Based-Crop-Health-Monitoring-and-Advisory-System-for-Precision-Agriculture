@@ -1,4 +1,4 @@
-# 🌱 Agricultural Weed Segmentation Using U-Net
+## POC-4 : AI-Enabled Drone-Based Crop Health Monitoring and Advisory System for Precision Agriculture
 
 ## 📌 Project Overview
 
