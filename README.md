@@ -147,27 +147,6 @@ The 150-image subset should also be clearly identified as a weed-only evaluation
 9. Segmentation-mask visualization
 10. Performance analysis and iterative improvement
 
-## 🚀 Future Improvements
-
-- Improve weed detection and segmentation performance, particularly for small or difficult-to-distinguish regions.
-- Investigate false positives and missed weed detections.
-- Refine annotation quality and mask boundaries.
-- Tune learning rate, batch size, image resolution, and training duration.
-- Apply suitable data augmentation to improve robustness under varying lighting and field conditions.
-- Investigate class imbalance and differences in weed appearance.
-- Compare YOLO26n-seg with alternative segmentation architectures, including U-Net, U-Net++, Attention U-Net, and DeepLabV3+.
-- Evaluate generalization on independent, unseen agricultural images.
-- Measure inference latency and memory usage for potential deployment on agricultural monitoring systems.
-- Track model versions and compare them using consistent evaluation procedures.
-
-## 🌾 Applications
-
-- Automated weed identification in agricultural fields
-- Precision weed management
-- Agricultural image analysis
-- Support for targeted weed-control strategies
-- Drone-assisted crop monitoring
-- Research into computer-vision-based smart farming systems
 
 ## 📌 Current Status
 
